@@ -76,8 +76,6 @@ def load_weight_from_coarse_segmentation(in_channels, model, weight_path, net_ar
                 d1[k2] = torch.cat((d1[k2][:, :1, ...], noise, d1[k2][:, 1:, ...]), dim=1)
         model.load_state_dict(d1)
         return model
-
-
     elif net_architecture == "SwinTransformerSys3D":
         d = torch.load(weight_path)
         shape = list(d['patch_embed.proj.weight'].shape)
