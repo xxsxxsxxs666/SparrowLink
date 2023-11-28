@@ -75,7 +75,7 @@ if __name__ == "__main__":
     if cfg.dic['mode'] == 'train':
 
         # ---------------------------- built transform sequence ---------------------------- #
-        # ------------- take a look at val_transform on dataset and save a case ------------ #
+        # ---------------------- Create Model, Loss, Optimizer in Config ------------------- #
         cfg.creat_training_require()
         train_transforms, val_transforms, save_transform = get_transform(cfg.dic['transform'])
         if cfg.dic["train"]["loader"].get("file_path"):
@@ -114,8 +114,7 @@ if __name__ == "__main__":
                 experiment_path_fold = experiment_path
             write_data_reference(files[i], experiment_path_fold)
             save_json(files[i], os.path.join(experiment_path_fold, 'files.txt'))
-            # ---------------------- Create Model, Loss, Optimizer in Config ----------------- #
-            # --------------------------------- using config ------------------------------ #
+            # --------------------------------- save config ------------------------------ #
             cfg.save_config(os.path.join(experiment_path_fold, 'configs.yaml'))
             if cfg.dic['train']['loader'].get('split_mode') == "five_fold":
                 print(f"----------------fold{i} start!-----------------")
@@ -164,6 +163,7 @@ if __name__ == "__main__":
                                              )
 
     elif cfg.dic['mode'] == 'test':
+        # ---------------------------- built transform sequence ---------------------------- #
         train_transforms, val_transforms, save_transform = get_transform(cfg.dic['transform'])
 
         cfg.creat_test_require()
@@ -179,7 +179,6 @@ if __name__ == "__main__":
             files = prepare_datalist(image_file=cfg.train_img_path,
                                      label_file=cfg.test_label_path,
                                      split_mode=cfg.dic['test']['loader']['split_mode'], )
-        # ---------------------------- built transform sequence ---------------------------- #
 
         total_ds = CacheDataset(
             data=files, transform=val_transforms, cache_rate=cfg.dic['test']['loader']['cache'], num_workers=2)
@@ -192,12 +191,12 @@ if __name__ == "__main__":
                                         save_data=cfg.dic['test']['save_data'])
 
     elif cfg.dic['mode'] == 'infer':
+        # ---------------------------- built transform sequence ---------------------------- #
         infer_transforms = get_transform(cfg.dic['transform'], mode='infer')
 
         cfg.creat_infer_require()
         cfg.save_config(os.path.join(cfg.infer_output_path, 'config.yaml'))
 
-        # ---------------------------- built transform sequence ---------------------------- #
         # files = prepare_image_list(image_path=cfg.dic['infer']['loader']['path'])
 
         image_path = pathlib.Path(cfg.infer_img_path)
