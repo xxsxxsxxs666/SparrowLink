@@ -1,3 +1,3 @@
-# SparrowLink
-a two-stage and two-phase framework to solve discontinuity problems in coronary artery segmentation.  
-The framework is based on MONAI and nnUnet. Still in modifying.
+# SparrowLink （a two-Stage, two-Phase And special-Region-aware segmentation Optimization Workflow for discontinuity-Link）
+The name is given by chatgpt3.5. The framework is based on MONAI and nnUnet. 
+Still in modifying for better viewing.
