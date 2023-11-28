@@ -734,25 +734,3 @@ def update(pbar, L, L_gt, L_auxiliary, result):
 
 def error_back(err):
     print(err)
-
-
-# kwargs = {"label": pre_merge_gt_array,
-#           "GT": GT_color_array,
-#           "auxiliary": auxiliary_array,
-#           "pre_mask": pre_mask_gt_array,
-#           "view": True,
-#           "spacing": pre_mask_gt_img.GetSpacing(),
-#           "origin": pre_mask_gt_img.GetOrigin(),
-#           "direction": pre_mask_gt_img.GetDirection(),
-#           "max_broken_size_percentage": percentage,
-#           "min_sphere_radius_percentage": 0.015,
-#           "sphere_dilation_percentage": 0.2,
-#           "centerline_save": centerline_path,
-#           "endpoints_save": None,
-#           "save_path": mask_path,
-#           "region_select": 3,
-#           "cube_min_size": (10, 10, 10),
-#           "skeleton_refine_times": 2,
-#           "region_threshold": 5,
-#           "angle_threshold_1": 0.0,
-#           "angle_threshold_2": 0.0, }
