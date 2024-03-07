@@ -1,6 +1,8 @@
 # Anatomy-Informed Data Augmentation for Coronary Artery in CCTA Image
 * Video of the on-the-fly anatomy-based data augmentation （slice view）
-![image](https://github.com/xxsxxsxxs666/SparrowLink/assets/61532031/fd2e33e7-8a14-4f84-9bcc-4b5b9f9dd7fa.gif)
+  
+![1706926881079 00h00m00s-00h00m08s](https://github.com/xxsxxsxxs666/SparrowLink/assets/61532031/3e430230-c556-4a0a-856c-f34203b99ebb)
+
 * Video of the on-the-fly anatomy-based data augmentation. （3D）
 ![3D Slicer 5 2 1 2024-02-29 15-57-46 00h00m00s-00h00m11s](https://github.com/xxsxxsxxs666/SparrowLink/assets/61532031/c203e8bf-a892-4227-98cb-060fc3c40671)
 
