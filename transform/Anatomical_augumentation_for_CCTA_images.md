@@ -5,8 +5,8 @@
 
 * You can easily use our anatomy-based data augmentation tool by simply plugging it into MONAI transform architecture:
 
-
-`    save_transform = Compose(
+```python
+save_transform = Compose(
         [
             LoadImaged(keys=["image", "label", "heart"]),
             EnsureChannelFirstd(keys=["image", "label", "heart"]),
@@ -28,5 +28,4 @@
                        print_log=True, padding_mode="zeros"),
         ]
     )
-`
-   
+```
