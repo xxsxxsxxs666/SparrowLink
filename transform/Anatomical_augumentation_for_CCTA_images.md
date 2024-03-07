@@ -6,7 +6,7 @@
 ![3D Slicer 5 2 1 2024-02-29 15-57-46 00h00m00s-00h00m11s](https://github.com/xxsxxsxxs666/SparrowLink/assets/61532031/c203e8bf-a892-4227-98cb-060fc3c40671)
 
 * real CCTA image video:
-![Uploading 1706926881079[00h00m00s-00h00m08s].gif…]()
+![1706926881079 00h00m00s-00h00m08s](https://github.com/xxsxxsxxs666/SparrowLink/assets/61532031/c6cdce80-186f-44d0-bcc9-4abb36e9f1ef)
 
 * You can use our anatomy-based data augmentation tool by simply plugging it into MONAI transform architecture:
 
