@@ -34,3 +34,30 @@ save_transform = Compose(
         ]
     )
 ```
+
+```python
+save_transform = Compose(
+        [
+            LoadImaged(keys=["image", "label", "heart"]),
+            EnsureChannelFirstd(keys=["image", "label", "heart"]),
+            ArteryTransformD(keys=["image", "label"], image_key="image", artery_key="label", p_anatomy_per_sample=1,
+                             p_contrast_per_sample=1,
+                             contrast_reduction_factor_range=(0.6, 1), mask_blur_range=(3, 6),
+                             mvf_scale_factor_range=(1, 2), mode=("bilinear", "nearest")),
+            RandCropByPosNegLabeld(
+                keys=["image", "label"],
+                label_key="label",
+                spatial_size=(128, 128, 128),
+                pos=3,
+                neg=1,
+                num_samples=4,
+                image_key="image",
+                image_threshold=0,
+            ),
+            SaveImaged(keys=["image"], output_dir=save_dir, output_postfix='spatial_transform_image',
+                       print_log=True, padding_mode="zeros"),
+            SaveImaged(keys=["label"], output_dir=save_dir, output_postfix='spatial_transform_label',
+                       print_log=True, padding_mode="zeros"),
+        ]
+    )
+```
