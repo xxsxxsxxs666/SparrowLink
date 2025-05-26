@@ -34,5 +34,23 @@ data_path/
 │   └── ...
 ```
 You should add the `train` and `test` folders to the config file. 
+
+## Citation
+
+If you find this work helpful, please consider giving this repository a star ⭐ and citing our paper:
+```
+@INPROCEEDINGS{ISBI,
+  author={Xiong, Xiaosong and Zhang, Xiao and Jiang, Caiwen and Liu, Jiameng and Cui, Zhiming and Wu, Dijia and Shen, Dinggang},
+  author+an = {1=highlight},
+  booktitle={2024 IEEE International Symposium on Biomedical Imaging (ISBI)}, 
+  title={Discontinuity-Aware Coronary Artery Segmentation on CCTA Image}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-5},
+  keywords={Image segmentation;Solid modeling;Codes;Computed tomography;Angiography;Merging;Detectors;Coronary Artery Segmentation;Discontinuity Link Algorithm;Topology Preserving},
+  doi={10.1109/ISBI56570.2024.10635820}}
+```
+
 ## Acknowledgment
 This project is partially built upon the [**MONAI**](https://github.com/Project-MONAI/MONAI) framework.
